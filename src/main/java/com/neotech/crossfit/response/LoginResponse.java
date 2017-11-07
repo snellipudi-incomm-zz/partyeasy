@@ -4,7 +4,7 @@ public class LoginResponse {
 
     private String userName;
     private String Sex;
-    private String age;
+    private Integer age;
     private String type;
 
     public String getUserName() {
@@ -23,11 +23,11 @@ public class LoginResponse {
         Sex = sex;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

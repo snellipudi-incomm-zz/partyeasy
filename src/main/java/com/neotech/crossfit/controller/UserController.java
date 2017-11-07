@@ -39,7 +39,7 @@ public class UserController {
                 LoginResponse loginResponse = new LoginResponse();
                 logger.info("message = Retrieving values from session, userEvent=" + UserEvents.GETUSERDETAILS);
                 loginResponse.setUserName(newSession.getAttribute("userName").toString());
-                loginResponse.setAge(newSession.getAttribute("age").toString());
+                loginResponse.setAge(Integer.valueOf(newSession.getAttribute("age").toString()));
                 loginResponse.setType(newSession.getAttribute("type").toString());
                 loginResponse.setSex(newSession.getAttribute("sex").toString());
                 return new ResponseEntity<>(loginResponse, HttpStatus.OK);
