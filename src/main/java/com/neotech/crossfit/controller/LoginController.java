@@ -1,6 +1,7 @@
 package com.neotech.crossfit.controller;
 
 
+import com.neotech.crossfit.App.Appl;
 import com.neotech.crossfit.constants.Constants;
 import com.neotech.crossfit.constants.UserEvents;
 import com.neotech.crossfit.request.LoginRequest;
@@ -49,6 +50,9 @@ public class LoginController {
                 loginResponse.setAge("25");
                 loginResponse.setType("premium");
                 addSession(loginResponse );
+
+                Appl service = new Appl();
+                service.saveLoginDetails();
                 return new ResponseEntity<>(baseResponse, HttpStatus.OK);
             } else{
                 baseResponse.setResponseCode(Constants.UNAUTHORIZED_CODE);
