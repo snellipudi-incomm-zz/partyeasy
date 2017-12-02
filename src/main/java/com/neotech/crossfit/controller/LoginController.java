@@ -47,7 +47,7 @@ public class LoginController {
                 LoginResponse loginResponse = new LoginResponse();
                 loginResponse.setUserName("test01");
                 loginResponse.setSex("Male");
-                loginResponse.setAge("25");
+                loginResponse.setAge(25);
                 loginResponse.setType("premium");
                 addSession(loginResponse );
 
