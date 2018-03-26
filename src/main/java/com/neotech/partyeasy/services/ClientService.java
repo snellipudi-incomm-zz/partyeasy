@@ -44,7 +44,7 @@ public class ClientService {
 
     public Object getClientService(String email) throws Exception{
 
-        ObjectMapper mapper = new ObjectMapper();
+        //ObjectMapper mapper = new ObjectMapper();
 
         //PartySpace partySpace = partySpaceRepository.findByEmail(email);
 
