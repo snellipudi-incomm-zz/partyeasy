@@ -1,6 +1,7 @@
-package com.neotech.crossfit.response;
+package com.neotech.partyeasy.response;
 
 public class BaseResponse {
+
     private String responseCode;
     private String responseMessage;
 

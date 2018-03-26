@@ -1,4 +1,4 @@
-package com.neotech.crossfit.config;
+package com.neotech.partyeasy.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .cors().and()
+        .headers().frameOptions().disable()
 
         ;
     }

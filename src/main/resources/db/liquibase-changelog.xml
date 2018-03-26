@@ -1,0 +1,27 @@
+<!--
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="101" author="Soma">
+
+        <createTable tableName="address_table">
+            <column name="address_id" type="BIGINT" autoIncrement="true"><constraints nullable="false" unique="true" primaryKey="true"/></column>
+            <column name="pincode" type="varchar(8)" ><constraints nullable="true" /></column>
+            <column name="door_number" type="varchar(20)" ><constraints nullable="true"/></column>
+            <column name="address_line1" type="varchar(250)"><constraints nullable="false"/> </column>
+            <column name="address_line2" type="varchar(250)" ><constraints nullable="true"/></column>
+            <column name="city" type="varchar(50)" ><constraints nullable="true"/></column>
+            <column name="phone_number1" type="varchar(50)" ><constraints nullable="true"/></column>
+            <column name="phone_number2" type="varchar(500)" ><constraints nullable="true" /></column>
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="date_created" type="datetime"/>
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="last_updated" type="datetime"/>
+        </createTable>
+    </changeSet>
+
+
+
+</databaseChangeLog>-->

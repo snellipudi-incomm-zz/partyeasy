@@ -1,4 +1,4 @@
-package com.neotech.crossfit.config;
+package com.neotech.partyeasy.config;
 
 import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.client.config.ClientConfig;

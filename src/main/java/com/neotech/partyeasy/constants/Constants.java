@@ -1,4 +1,4 @@
-package com.neotech.crossfit.constants;
+package com.neotech.partyeasy.constants;
 
 public class Constants {
 

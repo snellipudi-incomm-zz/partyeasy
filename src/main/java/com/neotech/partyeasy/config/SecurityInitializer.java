@@ -1,4 +1,4 @@
-package com.neotech.crossfit.config;
+package com.neotech.partyeasy.config;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
