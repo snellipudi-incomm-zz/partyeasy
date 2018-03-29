@@ -12,4 +12,8 @@ public class Constants {
     public static final String ERR_SESSION_EXPIRED_MESSAGE = "session expired";
     public static final String WEBSERVICE_EXCEPTION_CODE = "96";
     public static final String WEBSERVICE_EXCEPTION_MESSAGE = "web service exception";
+
+
+    public static final String PARTYSPACE = "party space";
+    public static final String CLIENT = "client";
 }

@@ -35,9 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .cors().and()
-        .headers().frameOptions().disable()
-
-        ;
+                .headers().frameOptions().disable();
     }
 
 

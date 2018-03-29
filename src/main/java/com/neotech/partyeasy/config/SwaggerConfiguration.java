@@ -14,10 +14,9 @@ package com.neotech.partyeasy.config;
         import springfox.documentation.spring.web.plugins.Docket;
         import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-   /**
-    *  *
-        * Swagger Configurations
-*/
+/**
+ * swagger configurations.
+ */
 
 @Configuration
 @EnableSwagger2
@@ -44,7 +43,7 @@ public class SwaggerConfiguration {
                 .title("Party Easy")
                 .description("API for Party Easy")
                 .version("1.0-BETA")
-                .contact(new Contact("Soma Nellipudi","","snellipudi@incomm.com"))
+                .contact(new Contact("Kiran Nellipudi","","kiran445446@gmail.com"))
                 .build();
     }
 }

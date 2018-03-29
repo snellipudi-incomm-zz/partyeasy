@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity
 @Table(name = "address_table")
 @EntityListeners(AuditingEntityListener.class)
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Address {
 
     @Id

@@ -29,14 +29,14 @@ public class PartySpace {
     @Column(nullable = false)
     private String incharge;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="address_id")
     private Address address;
 
     @Column(nullable = false)
     private int capacity;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="cost_id")
     private Cost cost;
 
