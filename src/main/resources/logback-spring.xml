@@ -6,7 +6,7 @@
 
     <appender name="FILE-APPENDER"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_PATH}/traders.log</file>
+        <file>${LOG_PATH}/partyeasy.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>${filePattern}</Pattern>
         </encoder>
