@@ -13,7 +13,7 @@
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
-            <fileNamePattern>${LOG_PATH}/vms.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/partyeasy.%d{yyyy-MM-dd}.log</fileNamePattern>
 
         </rollingPolicy>
 

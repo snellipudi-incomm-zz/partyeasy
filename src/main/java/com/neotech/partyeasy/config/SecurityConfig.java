@@ -28,15 +28,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //auth
         //.inMemoryAuthentication()
         // .withUser("user").password("password").roles("USER");
+        //auth.inMemoryAuthentication().withUser("PartyEasy").password("PartyEasy").roles("USER");
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity
                 .csrf().disable()
                 .cors().and()
                 .headers().frameOptions().disable();
+     /*   httpSecurity.authorizeRequests().antMatchers("/partyeasy/**").permitAll()
+                .anyRequest().authenticated()
+                .and().httpBasic();*/
+/*        httpSecurity.csrf().disable();
+        httpSecurity.headers().frameOptions().disable();*/
     }
+
 
 
     @Bean

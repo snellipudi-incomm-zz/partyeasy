@@ -7,6 +7,7 @@ import com.neotech.partyeasy.model.PartySpace;
 import com.neotech.partyeasy.repository.PartySpaceRepository;
 import com.neotech.partyeasy.request.LoginRequest;
 import com.neotech.partyeasy.response.BaseResponse;
+import org.jasypt.encryption.StringEncryptor;
 import org.slf4j.MDC;
 import org.slf4j.ext.XLogger;
 import org.slf4j.ext.XLoggerFactory;
@@ -26,6 +27,9 @@ public class AuthenticateService {
 
     @Autowired
     HttpServletRequest httpServletRequest;
+
+    /*@Autowired
+    StringEncryptor stringEncryptor;*/
 
     private XLogger xLogger = XLoggerFactory.getXLogger(getClass());
 

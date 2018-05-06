@@ -52,6 +52,7 @@ public class ClientService {
     public Object getPartySpaceService(String email) throws Exception{
         xLogger.entry("Message : Entered getPartySpaceService, UserEvents = ", UserEvents.CLIENTSERVICE);
         PartySpace partySpace = partySpaceRepository.findByEmail(email);
+        xLogger.info("Message : Sending details of partySpace name ["+ partySpace.getName()+ "] email id ["+ partySpace.getEmail() + "] UserEvents = "+ UserEvents.GETPARTYSPACE);
         return partySpace;
 
     }

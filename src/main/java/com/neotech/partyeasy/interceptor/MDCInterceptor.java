@@ -3,6 +3,8 @@ package com.neotech.partyeasy.interceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
+import org.slf4j.ext.XLogger;
+import org.slf4j.ext.XLoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -18,7 +20,7 @@ import java.util.UUID;
 public class MDCInterceptor extends OncePerRequestFilter {
 
 
-    final static Logger logger = LoggerFactory.getLogger(MDCInterceptor.class);
+    private XLogger logger = XLoggerFactory.getXLogger(getClass());
 
     public static final String REQUEST_ID = "Request-TraceId";
     public static final String SESSION_ID = "Session-TraceId";
@@ -26,7 +28,7 @@ public class MDCInterceptor extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        logger.info("Entering MDCInterceptor");
+        logger.entry("Entering MDCInterceptor");
         String sessionId = httpServletRequest.getHeader("x-auth-token");
         if(sessionId!=null){
             logger.info("Retrieving the session-traceid from the session. After login");
@@ -40,7 +42,7 @@ public class MDCInterceptor extends OncePerRequestFilter {
             }
         }
         else{
-            logger.info("Generating the session -traceid");
+            logger.debug("Generating the session -traceid");
             String sessionTraceId = UUID.randomUUID().toString();
             MDC.put(SESSION_ID, sessionTraceId);
         }
@@ -51,7 +53,7 @@ public class MDCInterceptor extends OncePerRequestFilter {
         httpServletResponse.setHeader("Session-TraceId",MDC.get(SESSION_ID));
 
         filterChain.doFilter(httpServletRequest, httpServletResponse);
-        logger.info("Clearing MDC");
+        logger.debug("Clearing MDC");
         MDC.clear();
     }
 }

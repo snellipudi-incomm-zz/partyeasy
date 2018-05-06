@@ -2,8 +2,11 @@ package com.neotech.partyeasy.config;
 
         import com.google.common.base.Predicate;
         import com.google.common.base.Predicates;
+        import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.Configuration;
+        import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+        import org.springframework.security.config.annotation.web.builders.HttpSecurity;
         import springfox.documentation.builders.ApiInfoBuilder;
         import springfox.documentation.builders.PathSelectors;
         import springfox.documentation.builders.RequestHandlerSelectors;
@@ -42,8 +45,10 @@ public class SwaggerConfiguration {
         return new ApiInfoBuilder()
                 .title("Party Easy")
                 .description("API for Party Easy")
-                .version("1.0-BETA")
+                .version("1.0-ALPHA")
                 .contact(new Contact("Kiran Nellipudi","","kiran445446@gmail.com"))
                 .build();
     }
+
+
 }
